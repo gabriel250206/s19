@@ -10,7 +10,7 @@ import { AuthService } from '../auth.service';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, FormsModule, NgFor],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, CommonModule, FormsModule, ],
 })
 export class HomePage {
 
