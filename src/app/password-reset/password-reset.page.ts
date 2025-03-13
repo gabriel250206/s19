@@ -38,6 +38,6 @@ export class PasswordResetPage implements OnInit {
   }
 
   onLogin() {
-    this.router.navigateByUrl("login");
+    this.router.navigateByUrl("home");
   }
 }
