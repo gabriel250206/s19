@@ -6,13 +6,13 @@ import { TaskService, Task } from '../task.service';
 import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-tareas',
+  templateUrl: 'tareas.page.html',
+  styleUrls: ['tareas.page.scss'],
   imports: [IonContent, CommonModule, NgFor,FormsModule],
   standalone: true,
 })
-export class HomePage implements OnInit {
+export class TareasPage implements OnInit {
   tasks$: Observable<Task[]> = new Observable<Task[]>();
 
   constructor(public taskService: TaskService) {}

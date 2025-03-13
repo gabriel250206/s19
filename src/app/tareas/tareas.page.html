@@ -1,7 +1,7 @@
 <ion-content padding style="background-color: black">
   <h2 style="color: yellow">Directorio</h2>
   <input #nameInput type="text" placeholder="Nombre" />
-  <input #dayInput type="date" placeholder="Día" />
+  <input #numtelInput type="number" placeholder="Número" />
 
   <button
     style="color: blue"
@@ -19,7 +19,6 @@
         <th>ID</th>
         <th>Nombre</th>
         <th>Número</th>
-        <th>Completado</th>
         <th>Editar</th>
       </tr>
     </thead>
@@ -28,13 +27,6 @@
     <td>{{ item.id }}</td>
     <td><input type="text" [(ngModel)]="item.name" /></td>
     <td><input type="number" [(ngModel)]="item.numtel" /></td>
-    <td>
-      <input
-        type="checkbox"
-        [checked]="item.completed"
-        (change)="toggleCompleted(item.id!, $event)"
-      />
-    </td>
     <td>
       <button (click)="deleteItem(item.id!)"> Eliminar</button>
       <button (click)="editTask(item.id!, item.name, item.numtel)">Guardar</button>
