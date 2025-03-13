@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { IonContent } from '@ionic/angular/standalone';
+import { IonContent, IonCard } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { NgFor } from '@angular/common';
 import { TaskService, Task } from '../task.service'; 
 import { FormsModule } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tareas',
   templateUrl: 'tareas.page.html',
   styleUrls: ['tareas.page.scss'],
-  imports: [IonContent, CommonModule, NgFor,FormsModule],
+  imports: [IonCard, IonContent, CommonModule, NgFor,FormsModule],
   standalone: true,
 })
 export class TareasPage implements OnInit {
   tasks$: Observable<Task[]> = new Observable<Task[]>();
 
-  constructor(public taskService: TaskService) {}
+  constructor(public taskService: TaskService, private auth:AuthService, private router:Router) {}
 
   ngOnInit() {
     this.tasks$ = this.taskService.getTasks();
@@ -61,5 +63,9 @@ export class TareasPage implements OnInit {
     }).catch(error => {
       console.error('Error al actualizar estado:', error);
     });
+  }
+  async logout(){
+    await this.auth.logout();
+    this.router.navigateByUrl('home');
   }
 }
