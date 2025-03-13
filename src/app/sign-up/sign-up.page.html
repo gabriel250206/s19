@@ -4,10 +4,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">sign-up</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+  <b>Username</b>
+  <br>
+  <input #emailInput type="text" placeholder="email" style="color: black;" [(ngModel)]="username" name="username">
+  <br>
+  <br>
+  <b>Password</b>
+  <br>
+  <input #passwordInput type="password" placeholder="password"style="color: black;" [(ngModel)]="password" name="password">
+  <br>
+  <br>
+  <button class="text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+    type="submit">
+
+    aaa
+  </button>
+  <!-- (click)="addItem(emailInput.value, passwordInput.value); emailInput.value = ''; passwordInput.value = '';" -->
+</form>
+  <br>
+  <button (click)="onSignUp()">
+    go to login
+</button>
+
 </ion-content>
