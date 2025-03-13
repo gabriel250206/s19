@@ -32,10 +32,9 @@ export class HomePage {
       const alert = await this.alertController.create({
         header: 'Login Success',
         message: 'You have logged in successfully!',
-        buttons: ['OK']
-
+        buttons: ['OK'],
       });
-      this.router.navigateByUrl("home");
+      this.router.navigateByUrl("tareas");
       await alert.present();
     } else {
       const alert = await this.alertController.create({
