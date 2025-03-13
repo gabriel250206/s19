@@ -37,7 +37,7 @@ export class SignUpPage implements OnInit {
         buttons: ['OK']
       });
       await alert.present();
-      this.router.navigateByUrl('login');
+      this.router.navigateByUrl('home');
 
     } catch (error) {
       const alert= await this.alertController.create({
@@ -75,7 +75,7 @@ export class SignUpPage implements OnInit {
 
 
   
-  onLogin() {
-    this.router.navigateByUrl("login");
+  onHome() {
+    this.router.navigateByUrl("home");
   }
 }
