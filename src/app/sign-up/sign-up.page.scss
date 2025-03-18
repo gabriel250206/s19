@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: yellow;
+    text-align: center;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+  }
+  
+  button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  table, th, td {
+    border: 1px solid white;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333;
+  }
+  
+  div {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  form {
+    text-align: center;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: auto;
+  }
+  
+  b {
+    color: yellow;
+  }
+  
+  .register-button {
+    background: linear-gradient(to right, teal, lime);
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .register-button:hover {
+    background: linear-gradient(to left, teal, lime);
+  }
+  
